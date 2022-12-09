@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import Intro from './components/Intro'
 import Header from './layout/Header'
@@ -10,7 +10,7 @@ import click from './utils/click'
 const App = () => {
     useEffect(() => {
         click()
-        maingsap() 
+        maingsap()
     }, [])
 
     return (
