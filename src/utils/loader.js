@@ -187,7 +187,7 @@ function loader() {
         onComplete: bodyComplete,
     })
     function bodyComplete() {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = 'unset'
     }
 }
 
