@@ -9,6 +9,10 @@ import click from './utils/click'
 
 const App = () => {
     useEffect(() => {
+        window.onbeforeunload = function pushRefresh() {
+            window.scrollTo(0, 0)
+        }
+
         click()
         maingsap()
     }, [])

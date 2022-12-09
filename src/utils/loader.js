@@ -1,6 +1,7 @@
 import { gsap } from 'gsap'
 
 function loader() {
+    document.body.style.overflow = 'hidden'
     const splitText = (selector) => {
         const elem = document.querySelector(selector)
 
@@ -183,7 +184,11 @@ function loader() {
     )
     tl.to('.loader', {
         className: 'dnone',
+        onComplete: bodyComplete,
     })
+    function bodyComplete() {
+        document.body.style.overflow = 'auto'
+    }
 }
 
 export default loader
