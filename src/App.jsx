@@ -10,7 +10,7 @@ import click from './utils/click'
 const App = () => {
     useEffect(() => {
         click()
-        maingsap()
+        maingsap() 
     }, [])
 
     return (
