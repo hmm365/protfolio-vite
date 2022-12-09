@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 function loader() {
     document.body.style.height = '100vh'
     document.body.style.overflow = 'hidden'
+    console.log(document.body)
 
     const splitText = (selector) => {
         const elem = document.querySelector(selector)
