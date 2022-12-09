@@ -21,7 +21,7 @@ const App = () => {
         bodyStart()
         setTimeout(() => {
             bodyComplete()
-        }, 8500)
+        }, 10000)
         window.onbeforeunload = function pushRefresh() {
             window.scrollTo(0, 0)
         }
