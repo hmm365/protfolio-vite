@@ -7,7 +7,7 @@ function click() {
             // console.log(inx);
             switch (inx) {
                 case 0:
-                    document.querySelector('.headline').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+                    document.body.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
                     break
                 case 1:
                     document.querySelector('.bulidUp').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
