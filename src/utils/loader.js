@@ -1,7 +1,9 @@
 import { gsap } from 'gsap'
 
 function loader() {
+    document.body.style.height = '100vh'
     document.body.style.overflow = 'hidden'
+
     const splitText = (selector) => {
         const elem = document.querySelector(selector)
 
@@ -187,6 +189,7 @@ function loader() {
         onComplete: bodyComplete,
     })
     function bodyComplete() {
+        document.body.style.height = 'auto'
         document.body.style.overflow = 'unset'
     }
 }
