@@ -8,7 +8,20 @@ import maingsap from './utils/maingsap'
 import click from './utils/click'
 
 const App = () => {
+    const bodyStart = () => {
+        document.body.style.height = '100vh'
+        document.body.style.overflow = 'hidden'
+        console.log(document.body)
+    }
+    const bodyComplete = () => {
+        document.body.style.height = 'auto'
+        document.body.style.overflow = 'unset'
+    }
     useEffect(() => {
+        bodyStart()
+        setTimeout(() => {
+            bodyComplete()
+        }, 8500)
         window.onbeforeunload = function pushRefresh() {
             window.scrollTo(0, 0)
         }

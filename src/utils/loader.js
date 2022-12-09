@@ -1,16 +1,6 @@
 import { gsap } from 'gsap'
 
 function loader() {
-    const bodyStart = () => {
-        document.body.style.height = '100vh'
-        document.body.style.overflow = 'hidden'
-        console.log(document.body)
-    }
-    const bodyComplete = () => {
-        document.body.style.height = 'auto'
-        document.body.style.overflow = 'unset'
-    }
-
     const splitText = (selector) => {
         const elem = document.querySelector(selector)
 
@@ -46,7 +36,7 @@ function loader() {
         return charsArray
     }
 
-    let tl = gsap.timeline({ repeat: 0, repeatDelay: 0, onStart: bodyStart })
+    let tl = gsap.timeline({ repeat: 0, repeatDelay: 0 })
     const chars = splitText('.loader__item--c')
     tl.to('.loader__item--c', { opacity: 1, duration: 0 })
     tl.from(
@@ -193,7 +183,6 @@ function loader() {
     )
     tl.to('.loader', {
         className: 'dnone',
-        onComplete: bodyComplete,
     })
 }
 
